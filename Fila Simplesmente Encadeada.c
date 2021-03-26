@@ -84,14 +84,14 @@ int item_ehIgual(TipoItem *item1, TipoItem *item2)
 
 int inserir(FilaUnica *fila, TipoItem *item)
 {
-    if (fila == NULL) // foi criada? -> NULL significa que não foi criada
+    if (fila == NULL) 
         return 0;
     else 
     {
         Celula *novo = criarCelula(item, fila->ultimo, NULL);
 
         if (novo == NULL)
-            return 0;   // não foi possível alocar memória
+            return 0;   
 
         if (estah_vazia(fila) == 1)
             fila->primeiro = fila->ultimo = novo;
@@ -111,7 +111,6 @@ TipoItem* excluir(FilaUnica *fila)
 
     Celula *aux = fila->primeiro;
     fila->primeiro = aux->proximo;
-
     fila->quantos--;
     TipoItem *dado = aux->item;
 
