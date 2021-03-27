@@ -171,7 +171,7 @@ int main()
                     mostrarContato(contato);
                 }
                 else
-                    printf("Excluir:: Sem contatos para excluir\n\n", id);
+                    printf("Excluir:: Sem contatos para excluir\n\n");
                     break;
 
             case 3: 
